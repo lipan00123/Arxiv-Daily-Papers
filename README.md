@@ -1,4 +1,49 @@
-<<<<<<< HEAD
+# arXiv Daily Pipeline
+
+This project runs a daily arXiv workflow:
+
+1. Fetch candidates by your research areas.
+2. Rank in two stages.
+3. Download final PDFs.
+4. Generate digest/brief outputs.
+5. Track history and deduplicate recent downloads.
+
+## Concepts
+
+### What is an `area`?
+
+An area is a research sub-topic, such as `Graph/Structure + LLMs` or `Agent Safety`.
+The pipeline searches per-area first, then merges results for final ranking.
+
+### What are keywords?
+
+- `keywords_for_arxiv`: used for retrieval (arXiv API query construction)
+- `keywords_for_llm`: used for LLM scoring/summarization preference
+
+Each area can also define `arxiv_query` for precise boolean search.
+
+### What is `category`?
+
+arXiv subject classes (for example, `cs.LG`, `cs.CL`).
+Configured via `categories_core`, `categories_extended`, and `category_scope`.
+
+### Profile vs config
+
+- `arxiv_research_profile.json`: what to search (research intent)
+- `arxiv_daily_config.json`: how to run (scale, filters, outputs)
+
+### Naming note: `skills/` vs `.agents/skills`
+
+- `skills/` in this repo stores Python code modules (pipeline implementation).
+- `.agents/skills/` stores LLM prompt skills (`SKILL.md`) used as soft constraints.
+
+So they are different layers: code execution vs LLM policy guidance.
+
+## Workflow
+
+Per run:
+
+2. Choose active areas via `selected_areas` and `area_search_plan`.
 # arXiv Daily Pipeline
 
 This project runs a daily arXiv workflow:
@@ -77,52 +122,6 @@ Use the same area names in profile and config.
 ## Output and tracking
 
 Set output folder in `arxiv_daily_config.json`:
-
-```json
-"output_root": "C:\\Users\\<you>\\paper-reading\\arxiv-download"
-```
-
-Each run writes date-based output folders containing:
-
-- PDFs
-- `digest_<run_stamp>.md`
-- `personalized_brief_<run_stamp>.md`
-- `commute_script.txt`
-- `papers.json`
-- `run_config_snapshot.json`
-
-History tracker is separate (set by `tracker_root` and `tracker_file`).
-
-## Key parameters
-
-In `arxiv_daily_config.json`:
-
-- `final_top`: final number of papers to download
-- `stage1_fetch_max_per_area`: max fetched per area
-- `stage1_top_per_area`: stage-1 keep count per area
-- `stage2_per_area_llm_top`: stage-2 keep count per area
-- `days`: lookback window for retrieval
-- `dedup_lookback_days`: lookback window for dedup
-
-LLM settings:
-
-- `llm_enabled`
-- `llm_model`
-- `llm_api_base`
-- `llm_skill_roots` (where skill `SKILL.md` files are discovered)
-- env var `OPENAI_API_KEY`
-
-PowerShell example:
-
-```powershell
-$env:OPENAI_API_KEY = [Environment]::GetEnvironmentVariable('OPENAI_API_KEY','User')
-```
-
-## Skill-based soft constraints
-
-You can define skills to guide ranking behavior with soft preferences.
-
-What this means:
 
 - Skills do not hard-filter papers.
 - Skills provide additional preference rules during LLM scoring/reranking.
@@ -218,7 +217,3 @@ python3 pipeline/arxiv-daily-custom/arxiv_daily.py --config arxiv_daily_config.j
 - Output module: `pipeline/arxiv-daily-custom/output_utils.py`
 - Tracker module: `pipeline/arxiv-daily-custom/tracker_utils.py`
 - Windows run script: `pipeline/arxiv-daily-custom/run_arxiv_daily.ps1`
-=======
-# Arxiv-Daily-Papers
-Automatically select and download relevant arxiv papers every day
->>>>>>> a371633c0eae3fabc6de5d840082c887b5775a30
