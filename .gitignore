@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Local envs
+.venv/
+venv/
+
+# Runtime logs / temp
+arxiv-daily/logs/
+*.log
+
+# Local tracking state (can be regenerated)
+arxiv-daily-tracker/download_history.jsonl
+arxiv-daily-tracker/*.backup.jsonl
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

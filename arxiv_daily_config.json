@@ -1,0 +1,73 @@
+{
+  "use_profile_for_content": true,
+  "profile_path": "C:\\Users\\pli77\\.openclaw\\workspace\\arxiv_management\\arxiv_research_profile.json",
+  "categories_core": [
+    "cs.LG",
+    "cs.CL",
+    "cs.AI",
+    "cs.CV",
+    "cs.RO",
+    "cs.MA",
+    "cs.CR",
+    "stat.ML"
+  ],
+  "categories_extended": [
+    "cs.SI",
+    "eess.IV",
+    "q-bio.BM",
+    "q-bio.QM",
+    "physics.data-an",
+    "physics.comp-ph",
+    "cond-mat.mtrl-sci"
+  ],
+  "category_scope": "all",
+  "arxiv_ranking_mode": "days+relevance", 
+  "arxiv_sort_by": "relevance",
+  "arxiv_sort_order": "descending",
+  "area_search_plan": [
+    {
+      "area": "Graph/Structure + LLMs",
+      "category_scope": "core",
+      "top": 3
+    },
+    {
+      "area": "Graph/Structure + World Models / VLMs",
+      "category_scope": "core",
+      "top": 3
+    },
+    {
+      "area": "Agent Safety",
+      "category_scope": "core",
+      "top": 3
+    },
+    {
+      "area": "VLA + World Models + Efficiency",
+      "category_scope": "core",
+      "top": 3
+    },
+    {
+      "area": "Science Applications",
+      "category_scope": "all",
+      "top": 3
+    }
+  ],
+  "days": 7,
+  "final_top": 5,
+  "stage1_top_per_area": 10,
+  "stage1_fetch_max_per_area": 100,
+  "stage2_per_area_llm_top": 3,
+  "retain_only_final_files": true,
+  "cleanup_on_dedup_reset": true,
+  "write_latest_brief_alias": false,
+  "write_latest_digest_alias": false,
+  "dedup_lookback_days": 7,
+  "tracker_root": "C:\\Users\\pli77\\.openclaw\\workspace\\arxiv_management\\arxiv-daily-tracker",
+  "tracker_file": "download_history.jsonl",
+  "output_root": "C:\\Users\\pli77\\GaTech Dropbox\\Pan Li\\paper-reading\\arxiv-download",
+  "llm_enabled": true,
+  "llm_model": "gpt-5.4-mini",
+  "llm_api_base": "https://api.openai.com/v1",
+  "llm_skill_roots": [
+    ".agents/skills"
+  ]
+}

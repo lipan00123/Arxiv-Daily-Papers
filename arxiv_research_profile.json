@@ -1,0 +1,165 @@
+﻿{
+  "research_interest_summary": "Trustworthy, efficient, and structure-aware foundation models at the intersection of graph learning, geometric deep learning, LLMs, world models, VLMs, VLA systems, and agent systems.",
+  "core_objective": "Use graph and other explicit structures to improve reasoning, computation, alignment, memory, retrieval, planning, controllability, and long-horizon decision-making in foundation models.",
+  "notes_for_search": {
+    "llm_keywords_usage": "Use keywords_for_llm for semantic ranking, prompt writing, and LLM-based paper triage.",
+    "arxiv_keywords_usage": "Use keywords_for_arxiv and arxiv_query for arXiv API search. Prefer short phrases and boolean combinations over long composite natural-language queries.",
+    "priority_preference": [
+      "mechanistically meaningful papers",
+      "technical depth over benchmark-only gains",
+      "explicit structure such as graphs, relations, memory graphs, knowledge graphs, scene graphs, or structured planners",
+      "methods that improve reasoning, efficiency, alignment, safety, controllability, or scientific usefulness",
+      "forward-looking work likely to matter in the next 2-5 years"
+    ],
+    "deprioritize": [
+      "incremental benchmark improvements without conceptual novelty",
+      "purely sequential LLM work without structural insight",
+      "application-only papers with limited methodological contribution"
+    ]
+  },
+  "research_interests": [
+    {
+      "area": "Graph/Structure + LLMs",
+      "focus": "How graph and structured inductive biases improve LLM reasoning, computation, alignment, memory, retrieval, and tool use.",
+      "keywords_for_llm": [
+        "graph-augmented LLMs",
+        "graph structure for LLM reasoning",
+        "graph structure for LLM computation",
+        "graph structure for LLM alignment",
+        "structured memory for LLM agents",
+        "knowledge graph RAG",
+        "graph-based retrieval augmented generation",
+        "graph-guided reasoning",
+        "relational inductive bias for LLMs",
+        "structured context for language models"
+      ],
+      "keywords_for_arxiv": [
+        "graph llm",
+        "graph-augmented llm",
+        "knowledge graph rag",
+        "graph rag",
+        "structured reasoning",
+        "structured memory",
+        "graph reasoning",
+        "llm alignment",
+        "llm planning",
+        "large language model"
+      ],
+      "arxiv_query": "((ti:\"large language model\" OR abs:\"large language model\" OR ti:llm OR abs:llm) AND (ti:\"graph\" OR abs:\"graph\" OR ti:\"knowledge graph\" OR abs:\"knowledge graph\" OR ti:\"graph rag\" OR abs:\"graph rag\" OR ti:\"structured memory\" OR abs:\"structured memory\" OR ti:\"relational\" OR abs:\"relational\") AND (abs:reasoning OR abs:planning OR abs:alignment OR abs:retrieval OR abs:memory OR abs:\"tool use\"))"
+    },
+    {
+      "area": "Graph/Structure + World Models / VLMs",
+      "focus": "How graph and relational structure improve grounding, multimodal reasoning, representation, controllability, and long-horizon prediction in world models and VLMs.",
+      "keywords_for_llm": [
+        "graph world models",
+        "structured world models",
+        "relational world models",
+        "graph-enhanced world models",
+        "graph VLM",
+        "structured VLM",
+        "multimodal reasoning with graphs",
+        "graph-grounded multimodal models",
+        "relational inductive bias for world models",
+        "structured scene understanding"
+      ],
+      "keywords_for_arxiv": [
+        "graph world model",
+        "structured world model",
+        "relational world model",
+        "graph vlm",
+        "structured vlm",
+        "multimodal reasoning",
+        "vision-language model",
+        "world model",
+        "scene graph",
+        "multimodal grounding"
+      ],
+      "arxiv_query": "((ti:\"world model\" OR abs:\"world model\" OR ti:\"vision-language model\" OR abs:\"vision-language model\" OR ti:vlm OR abs:vlm OR ti:multimodal OR abs:multimodal) AND (ti:\"graph\" OR abs:\"graph\" OR ti:\"scene graph\" OR abs:\"scene graph\" OR ti:\"relational\" OR abs:\"relational\" OR ti:\"structured\" OR abs:\"structured\") AND (abs:grounding OR abs:prediction OR abs:reasoning OR abs:controllability OR abs:\"long-horizon\"))"
+    },
+    {
+      "area": "Agent Safety",
+      "focus": "Safety, robustness, and trustworthiness in agent systems, especially unlearning, jailbreaking, privacy, and prompt injection in tool-using and multimodal agents.",
+      "keywords_for_llm": [
+        "agent safety",
+        "LLM agent safety",
+        "agent unlearning",
+        "LLM unlearning",
+        "agent jailbreaking",
+        "multimodal jailbreaking",
+        "privacy in agent systems",
+        "prompt injection",
+        "indirect prompt injection",
+        "trustworthy agents"
+      ],
+      "keywords_for_arxiv": [
+        "agent safety",
+        "llm agent",
+        "tool-using agent",
+        "agent unlearning",
+        "jailbreaking",
+        "prompt injection",
+        "indirect prompt injection",
+        "privacy",
+        "multimodal agent",
+        "agent robustness"
+      ],
+      "arxiv_query": "((ti:agent OR abs:agent OR ti:\"tool-using\" OR abs:\"tool-using\" OR ti:\"llm agent\" OR abs:\"llm agent\") AND (abs:safety OR abs:robustness OR abs:alignment OR abs:trustworthy OR abs:secure) AND (abs:unlearning OR abs:jailbreak OR abs:jailbreaking OR abs:\"prompt injection\" OR abs:\"indirect prompt injection\" OR abs:privacy))"
+    },
+    {
+      "area": "VLA + World Models + Efficiency",
+      "focus": "Diffusion- and flow-matching-based methods for faster, lower-latency, and more controllable VLA and world model systems.",
+      "keywords_for_llm": [
+        "vision-language-action models",
+        "VLA world models",
+        "diffusion world models",
+        "flow matching for world models",
+        "flow matching for robotics",
+        "fast diffusion sampling",
+        "accelerated diffusion models",
+        "efficient world models",
+        "low-latency VLA",
+        "real-time embodied AI"
+      ],
+      "keywords_for_arxiv": [
+        "vision-language-action",
+        "vla",
+        "world model",
+        "diffusion model",
+        "diffusion policy",
+        "flow matching",
+        "fast sampling",
+        "efficient world model",
+        "robotics",
+        "embodied ai"
+      ],
+      "arxiv_query": "((ti:\"vision-language-action\" OR abs:\"vision-language-action\" OR ti:vla OR abs:vla OR ti:\"world model\" OR abs:\"world model\") AND (abs:diffusion OR abs:\"diffusion policy\" OR abs:\"flow matching\") AND (abs:efficient OR abs:acceleration OR abs:\"fast sampling\" OR abs:\"low latency\" OR abs:\"real-time\" OR abs:robotics OR abs:\"embodied\"))"
+    },
+    {
+      "area": "Science Applications",
+      "focus": "Structure-aware foundation models and world models for scientific machine learning, especially molecules, proteins, materials, and physics.",
+      "keywords_for_llm": [
+        "scientific machine learning",
+        "AI for science",
+        "molecular foundation models",
+        "molecular dynamics",
+        "protein dynamics",
+        "materials foundation models",
+        "physics-informed world models",
+        "geometric deep learning for science",
+        "diffusion models for scientific data",
+        "flow matching for scientific data"
+      ],
+      "keywords_for_arxiv": [
+        "scientific machine learning",
+        "ai for science",
+        "molecular dynamics",
+        "protein dynamics",
+        "foundation model",
+        "geometric deep learning",
+        "diffusion model",
+        "flow matching"
+      ],
+      "arxiv_query": "((ti:\"scientific machine learning\" OR abs:\"scientific machine learning\" OR ti:\"ai for science\" OR abs:\"ai for science\" OR abs:molecular OR abs:protein OR abs:materials OR abs:physics) AND (abs:\"foundation model\" OR abs:\"world model\" OR abs:\"geometric deep learning\" OR abs:graph OR abs:relational) AND (abs:diffusion OR abs:\"flow matching\" OR abs:dynamics OR abs:simulation))"
+    }
+  ]
+}
