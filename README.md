@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # arXiv Daily Pipeline
 
 This project runs a daily arXiv workflow:
@@ -217,3 +218,7 @@ python3 pipeline/arxiv-daily-custom/arxiv_daily.py --config arxiv_daily_config.j
 - Output module: `pipeline/arxiv-daily-custom/output_utils.py`
 - Tracker module: `pipeline/arxiv-daily-custom/tracker_utils.py`
 - Windows run script: `pipeline/arxiv-daily-custom/run_arxiv_daily.ps1`
+=======
+# Arxiv-Daily-Papers
+Automatically select and download relevant arxiv papers every day
+>>>>>>> a371633c0eae3fabc6de5d840082c887b5775a30
